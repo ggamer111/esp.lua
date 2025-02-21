@@ -1,3 +1,103 @@
+--made by charie mitchell
+--discord habyt234
+
+
+print("loading now...")
+
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Create a ScreenGui and Frame for the background
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+-- Background Frame (semi-transparent)
+local backgroundFrame = Instance.new("Frame")
+backgroundFrame.Parent = screenGui
+backgroundFrame.Size = UDim2.new(0, 500, 0, 150)  -- Adjust size as needed
+backgroundFrame.Position = UDim2.new(0.5, -250, 0.5, -75)  -- Centered
+backgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)  -- Black background
+backgroundFrame.BackgroundTransparency = 0.2 -- Semi-transparent background
+
+-- TextLabel for the message
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = backgroundFrame
+textLabel.Text = "Made by Charlie Mitchell"
+textLabel.TextSize = 55  -- Change size as needed
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)  -- White text
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.BackgroundTransparency = 1  -- No background
+textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Centered in the background
+textLabel.Size = UDim2.new(1, 0, 0.5, 0)  -- Adjust height of the text label
+
+-- Countdown Timer Label
+local countdownLabel = Instance.new("TextLabel")
+countdownLabel.Parent = backgroundFrame
+countdownLabel.Text = "Closing in 10 seconds..."
+countdownLabel.TextSize = 50
+countdownLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+countdownLabel.Font = Enum.Font.SourceSans
+countdownLabel.BackgroundTransparency = 3
+countdownLabel.Position = UDim2.new(0, 0, 0.5, 0)  -- Below the main text
+countdownLabel.Size = UDim2.new(1, 0, 0.5, 0)  -- Adjust the size
+
+-- Countdown Logic
+local countdownTime = 5
+local function updateCountdown()
+    while countdownTime > 0 do
+        countdownLabel.Text = "esp Loading in  " .. countdownTime .. " seconds..."
+        wait(1)
+        countdownTime = countdownTime - 1
+    end
+    countdownLabel.Text = "Closing now..."
+    wait(1)
+    screenGui:Destroy()  -- Destroy the GUI after the countdown
+end
+
+-- Start the countdown
+updateCountdown()
+
+
+wait(1)
+
+
+
+local function screenGui()
+end
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Create a ScreenGui and Frame for the background
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+-- Background Frame (semi-transparent)
+local backgroundFrame = Instance.new("Frame")
+backgroundFrame.Parent = screenGui
+backgroundFrame.Size = UDim2.new(0, 1000, 0, 150)  -- Adjust size as needed
+backgroundFrame.Position = UDim2.new(0.5, -450, 0.5, -75)  -- Centered
+backgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)  -- Black background
+backgroundFrame.BackgroundTransparency = 0.2 -- Semi-transparent background
+
+-- TextLabel for the message
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = backgroundFrame
+textLabel.Text = "my discord is habyt234 dm if u have any issues "
+textLabel.TextSize = 55  -- Change size as needed
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)  -- White text
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.BackgroundTransparency = 1  -- No background
+textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Centered in the background
+textLabel.Size = UDim2.new(1, 0, 0.5, 0)  -- Adjust height of the text label
+
+
+wait(3)
+screenGui:Destroy()
+
+
+
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
