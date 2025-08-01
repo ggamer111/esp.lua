@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #00ccff;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.glow-bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #002233 0%, #000000 80%);
+  animation: pulse 10s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { filter: blur(60px); transform: scale(1); }
+  100% { filter: blur(80px); transform: scale(1.05); }
+}
+
+header {
+  text-align: center;
+  margin: 60px 20px 40px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 600;
+  color: #00ccff;
+  text-shadow: 0 0 12px #00ccff, 0 0 30px #0088aa;
+}
+
+.tagline {
+  color: #aaaaaa;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+main {
+  width: 90%;
+  max-width: 750px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.card {
+  background: rgba(0, 25, 40, 0.75);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #00ccff55;
+  box-shadow: 0 0 20px #00ccff33;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px #00ccff88;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #00e6ff;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
+  margin-bottom: 12px;
+  padding-left: 1em;
+  position: relative;
+}
+
+.card li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: #00ccff;
+}
+
+.download-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 14px 34px;
+  background: #00ccff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px #00ccff;
+}
+
+.download-btn:hover {
+  background: #00aaff;
+  box-shadow: 0 0 25px #00e6ff;
+}
+
+footer {
+  text-align: center;
+  margin: 80px 0 30px;
+  font-size: 0.9em;
+  color: #888;
+}
